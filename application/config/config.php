@@ -25,8 +25,9 @@ date_default_timezone_set('Asia/Jakarta');
 */
 $http = 'http' . ((isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] == 'on') ? 's' : '') . '://';
 $fo = str_replace("index.php", "", $_SERVER['SCRIPT_NAME']);
-
-$config['base_url'] = $http . $_SERVER['SERVER_NAME'] . "" . $fo;
+$config['base_url'] = $http . $_SERVER['HTTP_HOST'] . "" . $fo;
+// $config['base_url'] = $http . $_SERVER['SERVER_NAME'] . "" . $fo;
+// $config['base_url'] = "http://localhost:8080/sijapar/";
 
 /*
 |--------------------------------------------------------------------------
